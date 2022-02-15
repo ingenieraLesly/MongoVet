@@ -4,8 +4,9 @@ const petSchema=new mongoose.Schema(
     {
         name: String,
         race: String,
-        weitght: Number,
+        weight: Number,
         height: Number,
+        health: String,
         age: Number,
         dbStatus: Boolean,
     }

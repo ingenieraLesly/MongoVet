@@ -3,13 +3,13 @@ import cors from "cors";
 import dotenv from "dotenv";
 // import routes from "routes";
 import db from "./db/db.js";
-import petController from "./controllers/petController.js";
+import petRoutes from "./routes/petRoutes.js";
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use("/api/pet", petController);
+app.use("/api/pet", petRoutes);
 
 
 app.listen(process.env.PORT, () =>

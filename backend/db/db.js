@@ -6,9 +6,10 @@ const dbConnection = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("Connection with MongoDB: OK");
+    console.log("Connection with MongoDB: ON");
   } catch (e) {
-    console.log("Connecting to MongoDB: \n", e);
+    console.log("Error connecting to MongoDB: \n ", e);
   }
 };
+
 export default { dbConnection };

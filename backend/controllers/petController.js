@@ -16,18 +16,19 @@ const registerPet = async (req, res) => {
     name: req.body.name,
     race: req.body.race,
     weight: req.body.weight,
+    height: req.body.height,
     health: req.body.health,
     age: req.body.age,
-    // dbStatus: true,
+    dbStatus: true,
   });
-};
+
 
 let result = await schema.save();
-if (!result) 
+if (!result)
   return res.status(500).send({
-    message: "Failed to register pet",
+    message: "Failed to register pet"
   });
   res.status(200).send({ result });
-
+};
 
 export default { registerPet };
